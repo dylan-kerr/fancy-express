@@ -7,7 +7,6 @@ const sessionSequelize = require('connect-session-sequelize');
 const sessionDb = new Sequelize(
     'sqlite://session.sqlite',
     {
-        operatorsAliases: false,
         logging: false
     }
 );
