@@ -19,6 +19,6 @@ app.use((req, res, next) => {
 });
 app.use(routes);
 
-app.use(errorHandlers(app));
+app.use(errorHandlers);
 
 module.exports = app;

@@ -2,8 +2,10 @@
 
 const errorhandler = require('errorhandler');
 
-module.exports = app => {
-    errorhandler.title = app.get('title');
-
-    return errorhandler();
-};
+module.exports = [
+    (err, req, _res, next) => {
+        errorhandler.title = req.app.get('title');
+        next(err);
+    },
+    errorhandler()
+];

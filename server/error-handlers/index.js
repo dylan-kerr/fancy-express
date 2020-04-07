@@ -3,7 +3,7 @@
 const devErrors = require('./dev-errors');
 const notFound = require('./not-found');
 
-module.exports = app => [
+module.exports = [
     notFound,
-    devErrors(app)
+    devErrors
 ];
